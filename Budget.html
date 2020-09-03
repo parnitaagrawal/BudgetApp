@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF_8">
+<meta name="viewport" content="width=device_width, initial_scale=1.0">
+  <title>Budget App</title>
+  <style>
+    #div_Budget{
+      border:2px solid green;
+      width:300px;
+      height:150px;
+      margin:35px;
+       float:left; 
+       
+    }
+
+    #div_ExpenseForm{
+      border:2px solid maroon;
+      width:300px;
+      height:200px;
+       margin:35px;       
+       float: left;
+       
+      
+    }
+
+    #div_ShowData{
+      border:2px solid blue;
+      width:500px;
+      height:250px;
+      
+      margin-bottom:35px;
+      margin-left:400px;
+     
+    }
+
+    #div_ExpenseList
+    {
+      border:2px solid yellow;
+      width:500px;
+      height:500px;
+      margin-top:35px;
+     /* margin_bottom:700px; */
+      /* float: left; */
+      margin-left:400px;
+    }
+
+    #divExpense
+    {
+      overflow: hidden;
+    }
+
+    .selectedRow
+    {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="main_Container">
+    <div id="header">
+        <h2>BUDGET APP</h2>
+    </div>
+    <div >
+      <div id="div_Budget">
+        <label>Please enter your Budget</label>
+        <input id="txt_Budget" type="number"><br>
+        <button id="btn_Calculate">Calculate</button>
+      </div>
+
+      <div id="div_ShowData">
+        <div >
+          <h3>BUDGET</h3>
+          <label id="lblBudget"></label>
+        </div>
+        <div>
+          <h3>EXPENSES</h3>
+          <label id="lblExpenses"></label>
+        </div>
+        <div>
+          <h3>BALANCE</h3>
+          <label id="lblBalance"></label>
+        </div>
+      </div>
+    </div>
+    
+    <div id="divExpense">
+      <div id="div_ExpenseForm">
+        <label>Please enter your Expense</label>
+        <input id="txt_Expense" type="text" >
+        <br>
+        <label>Please enter expense amount</label>
+        <input id="txt_Amount" type="number">
+        <br>
+        <button id="btn_Add_Expense">Add Expense</button>
+      </div>
+
+      <div id="div_ExpenseList">
+        <table id="tblExpense" border="2px" style="width:100%;display: none;" >
+          <thead >
+            <tr >
+              <th>Expense Title</th>
+              <th>Expense Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>         
+        </table>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="Budget.js">
+    </script>
+</body>
+</html>
