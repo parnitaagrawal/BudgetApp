@@ -101,8 +101,8 @@ function createEditButton()
 { 
    
   var btnEdit= document.createElement('button');
-  var txtedit= document.createTextNode("Edit");
-  btnEdit.appendChild(txtedit);
+  btnEdit.innerHTML="<i class='fas fa-edit'></i>";
+  //btnEdit.appendChild(txtedit);
   btnEdit.addEventListener("click",function(){
     currentSituation="edit";
     var currenttr= this.closest("tr");
@@ -120,8 +120,8 @@ function createEditButton()
 function createDeleteButton()
 {
   var btnDelete= document.createElement('button');
-  var txtdelete= document.createTextNode("Delete");
-  btnDelete.appendChild(txtdelete); 
+  btnDelete.innerHTML= "<i class='fas fa-trash-alt'></i>";
+  
   btnDelete.addEventListener("click",function(){
     
     var currentdeletetr = btnDelete.closest("tr");
